@@ -1,0 +1,26 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalRestaurants.SignUpPage"
+             Title="Sign Up">
+    <StackLayout Padding="20">
+        <Entry x:Name="displayNameEntry"
+               Placeholder="Display Name"
+               ReturnType="Next"
+               Keyboard="Text" />
+        <Entry x:Name="emailEntry"
+               Placeholder="Email"
+               ReturnType="Next"
+               Keyboard="Email" />
+        <Entry x:Name="passwordEntry"
+               Placeholder="Password"
+               IsPassword="true"
+               ReturnType="Done"
+               Keyboard="Default" />
+        <Button x:Name="signUpButton"
+                Text="Sign Up"
+                Clicked="OnSignUpClicked" />
+        <Button x:Name="loginButton"
+                Text="Already have an account? Log in"
+                Clicked="OnLoginClicked" />
+    </StackLayout>
+    </ContentPage>

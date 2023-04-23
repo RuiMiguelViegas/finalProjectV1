@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalRestaurants.LoginPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+            <Label Text="InstaFood" FontSize="Large" TextColor="OrangeRed" HorizontalOptions="Center" />
+            <Image Source="icon.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   WidthRequest="150"
+                   HeightRequest="150"
+                   Margin="0, 50, 0, 69" />
+        </StackLayout>
+        <Entry x:Name="emailEntry" Placeholder="Email" />
+        <Entry x:Name="passwordEntry" Placeholder="Password" IsPassword="True" />
+        <Button Text="Login" Clicked="OnLoginClicked"/>
+        <Entry x:Name="displayNameEntry"
+               Placeholder="Display Name (Sign up)"
+               ReturnType="Next"
+               Keyboard="Text" />
+        <Button x:Name="signUpButton"
+                Text="Sign Up"
+                Clicked="OnSignUpClicked" />
+    </StackLayout>
+</ContentPage>

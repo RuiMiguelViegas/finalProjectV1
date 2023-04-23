@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="LocalRestaurants.RestaurantDetailPage">
+    <ScrollView>
+        <StackLayout Padding="5" Spacing="10">
+            <Label x:Name="NameLabel" FontSize="Medium" />
+            <CarouselView x:Name="ImageCarousel" HeightRequest="180" WidthRequest="180">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Source="{Binding .}" Aspect="AspectFill" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <Label Text="Description:"/>
+            <Label x:Name="DescriptionLabel" FontSize="Small" />
+            <Label Text="User Review:"/>
+            <Label x:Name="UserReviewLabel" FontSize="Small" />
+            <Label Text="Location:"/>
+            <maps:Map x:Name="RestaurantMap" HeightRequest="100" WidthRequest="100" MapType="Street" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

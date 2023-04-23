@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LocalRestaurants.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <SearchBar x:Name="searchBar" Placeholder="Search" TextChanged="OnSearchTextChanged" SearchButtonPressed="OnSearchButtonPressed" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Logout" Clicked="OnLogoutClicked" HorizontalOptions="End" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="1">
+            <Label x:Name="UserNameLabel" HorizontalOptions="End" TextColor="Chocolate" Margin="0,20,20,0" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Filter by:"/>
+                <Picker x:Name="filterPicker" SelectedIndexChanged="OnFilterChanged">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Rating</x:String>
+                            <x:String>Distance</x:String>
+                            <x:String>Price</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </StackLayout>
+
+            <CollectionView x:Name="collectionView" ItemsSource="{Binding Restaurants}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="5" Spacing="10">
+                            <Label Text="{Binding Name}" FontSize="Medium" />
+                            <Image Source="{Binding PreviewImage}" Aspect="AspectFill" HeightRequest="150" WidthRequest="150">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnRestaurantTapped" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

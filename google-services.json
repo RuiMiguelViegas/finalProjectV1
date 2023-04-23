@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "797582406718",
+    "project_id": "finalproject-f2591",
+    "storage_bucket": "finalproject-f2591.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797582406718:android:6693cf0481379b14a1cd6f",
+        "android_client_info": {
+          "package_name": "com.ruskin.fooodfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "797582406718-vjeb2up0oku0vqgniflkuav2tiv8i3mb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZTCfg7RjTA6TCRwwZNeRO8ndBnbf9yNI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "797582406718-vjeb2up0oku0vqgniflkuav2tiv8i3mb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
